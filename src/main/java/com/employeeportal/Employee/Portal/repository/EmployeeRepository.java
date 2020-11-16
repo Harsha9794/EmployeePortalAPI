@@ -11,7 +11,7 @@ import com.employeeportal.Employee.Portal.bean.Employee;
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
-	@Query(nativeQuery=true,value="select * from employee e order by first_name")
+	@Query(nativeQuery=true,value="select * from employee e order by first_name ")
 	public List<Employee> getEmployees();
 
 }

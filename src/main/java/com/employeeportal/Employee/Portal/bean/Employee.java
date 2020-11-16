@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sun.istack.NotNull;
 
 @Entity
 @Component
@@ -18,11 +19,16 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	@NotNull
 	private String firstName;
+	@NotNull
 	private String lastName;
+	@NotNull
 	private String gender;
+	@NotNull
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dateOfBirth;
+	@NotNull
 	private String department;
 	
 	public int getId() {
